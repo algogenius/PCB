@@ -1,42 +1,19 @@
-<div class="header">
-    <ul class="nav nav-pills pull-right">
-        <li class="active"><a ng-href="#">Home</a></li>
-        <li><a ng-href="#">About</a></li>
-        <li><a ng-href="#">Contact</a></li>
-    </ul>
-    <h3 class="text-muted">ParimeoCube</h3>
-</div>
+<input type="text" ng-model="greeting"/>
+<p>Hallo {{greeting}}!</p>
 
-<div class="jumbotron">
-    <h1>'Allo, 'Allo!</h1>
+<input type="range" min="0" max="360" step="1" ng-model="x"/><span>{{x}}</span>
+<input type="range" min="0" max="360" step="1" ng-model="y"/><span>{{y}}</span>
+<input type="range" min="0" max="360" step="1" ng-model="z"/><span>{{z}}</span>
 
-    <p class="lead">
-        <img src="images/yeoman.png" alt="I'm Yeoman"><br>
-        Always a pleasure scaffolding your apps.
-    </p>
-
-    <p><a class="btn btn-lg btn-success" ng-href="#">Splendid!</a></p>
-</div>
-
-<div class="row marketing">
-    <h4>HTML5 Boilerplate</h4>
-
-    <p>
-        HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or
-        sites.
-    </p>
-
-    <h4>Angular</h4>
-
-    <p>
-        AngularJS is a toolset for building the framework most suited to your application development.
-    </p>
-
-    <h4>Karma</h4>
-
-    <p>Spectacular Test Runner for JavaScript.</p>
-</div>
-
-<div class="footer">
-    <p>♥ from the Yeoman team</p>
+<div class="cube-container">
+    <div class="perspective">
+        <div class="cube" style="-webkit-transform: rotateX({{x}}deg) rotateY({{y}}deg) rotateZ({{z}}deg);">
+            <div class="front">{{greeting}}</div>
+            <div class="back">back</div>
+            <div class="top">top</div>
+            <div class="bottom">bottom</div>
+            <div class="left">left</div>
+            <div class="right">right</div>
+        </div>
+    </div>
 </div>

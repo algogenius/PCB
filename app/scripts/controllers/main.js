@@ -2,9 +2,7 @@
 
 angular.module('parimeoCubeApp')
     .controller('MainCtrl', function ($scope) {
-        $scope.awesomeThings = [
-            'HTML5 Boilerplate',
-            'AngularJS',
-            'Karma'
-        ];
+        $scope.x= 0;
+        $scope.y= 0;
+        $scope.z= 5;
     });

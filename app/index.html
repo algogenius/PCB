@@ -19,28 +19,7 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
 </head>
-<body ng-app="parimeoCubeApp" ng-init="x=0;y=0;z=0;">
-
-<input type="text" ng-model="greeting"/>
-
-<p>Hallo {{greeting}}!</p>
-
-<input type="range" min="0" max="360" step="1" ng-model="x"/>
-<input type="range" min="0" max="360" step="1" ng-model="y"/>
-<input type="range" min="0" max="360" step="1" ng-model="z"/>
-
-<div class="cube-container">
-    <div class="perspective">
-        <div class="cube" style="-webkit-transform: rotateX({{x}}deg) rotateY({{y}}deg) rotateZ({{z}}deg);">
-            <div class="front">front</div>
-            <div class="back">back</div>
-            <div class="top">top</div>
-            <div class="bottom">bottom</div>
-            <div class="left">left</div>
-            <div class="right">right</div>
-        </div>
-    </div>
-</div>
+<body ng-app="parimeoCubeApp" >
 
 <!--[if lt IE 7]>
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
