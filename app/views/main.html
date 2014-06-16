@@ -1,19 +1,5 @@
 <input type="text" ng-model="greeting"/>
 <p>Hallo {{greeting}}!</p>
 
-<input type="range" min="0" max="360" step="1" ng-model="x"/><span>{{x}}</span>
-<input type="range" min="0" max="360" step="1" ng-model="y"/><span>{{y}}</span>
-<input type="range" min="0" max="360" step="1" ng-model="z"/><span>{{z}}</span>
-
-<div class="cube-container">
-    <div class="perspective">
-        <div class="cube" style="-webkit-transform: rotateX({{x}}deg) rotateY({{y}}deg) rotateZ({{z}}deg);">
-            <div class="front">{{greeting}}</div>
-            <div class="back">back</div>
-            <div class="top">top</div>
-            <div class="bottom">bottom</div>
-            <div class="left">left</div>
-            <div class="right">right</div>
-        </div>
-    </div>
-</div>
+<cube></cube>
+<cube></cube>
