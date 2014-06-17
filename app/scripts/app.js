@@ -9,8 +9,8 @@ angular.module('parimeoCubeApp', [
     .config(function ($routeProvider) {
         $routeProvider
             .when('/', {
-                templateUrl: 'views/main.html',
-                controller: 'MainCtrl'
+                templateUrl: 'views/cubes.html',
+                controller: 'CubesController'
             })
             .otherwise({
                 redirectTo: '/'

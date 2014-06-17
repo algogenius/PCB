@@ -1,6 +1,6 @@
 'use strict';
 
 angular.module('parimeoCubeApp')
-    .controller('MainCtrl', function ($scope) {
+    .controller('CubesController', function ($scope) {
         $scope.greeting = "Christoph";
     });
