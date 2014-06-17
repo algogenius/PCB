@@ -1,8 +1,20 @@
-<input type="text" ng-model="greeting"/>
-<p>Hallo {{greeting}}!</p>
-
-<cube ng-repeat="cube in cubes"
-        init-x="{{cube.x}}"
-        init-y="{{cube.y}}"
-        init-z="{{cube.z}}">
-        </cube>
+<h1>Cubes</h1>
+<header>
+    <h2>Add new cube</h2>
+    <span> x: </span><input type="range" ng.model="x" min="0" max="360" step="1"><span> {{x}} </span>
+    <span> y: </span><input type="range" ng.model="y" min="0" max="360" step="1"><span> {{y}} </span>
+    <span> z: </span><input type="range" ng.model="z" min="0" max="360" step="1"><span> {{z}} </span>
+    <button class="addCube" ng-click="addCube(x, y, z)">Add cube</button>
+</header>
+<section>
+    <h2>Cube List [{{cubes.length}}]</h2>
+    <ul>
+        <li ng-repeat="cube in cubes">
+            <cube init-x="{{cube.x}}"
+                  init-y="{{cube.y}}"
+                  init-z="{{cube.z}}">
+            </cube>
+            <button class="removeButton" ng-click="removeCube($index)">Remove cube</button>
+        </li>
+    </ul>
+</section>
