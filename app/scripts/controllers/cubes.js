@@ -2,9 +2,13 @@
 
 angular.module('parimeoCubeApp')
     .controller('CubesController', function ($scope) {
-        $scope.cubes = [
-            { x: 35, y: 35, z: 35 },
-            { x: 5, y: 5, z: 0 },
-            { x: 10, y: 10, z: 10 }
-        ];
+        $scope.cubes = [];
+
+        $scope.addCube = function(xValue, yValue, zValue) {
+            $scope.cubes.push({ x: xValue, y: yValue, z: zValue });
+        }
+
+        $scope.removeCube = function(index) {
+            $scope.cubes.splice(index, 1);
+        }
     });
