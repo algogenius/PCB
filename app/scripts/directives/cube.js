@@ -5,6 +5,10 @@ angular.module('parimeoCubeApp')
         return {
             restrict: "E",
             templateUrl: "views/cube.html",
-            scope: true
+            scope: {
+                x: "@initX",
+                y: "@initY",
+                z: "@initZ"
+            }
         };
     });
