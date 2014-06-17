@@ -1,6 +1,8 @@
 <input type="text" ng-model="greeting"/>
 <p>Hallo {{greeting}}!</p>
 
-<cube init-x="0" init-y="0" init-z="0"></cube>
-<cube init-x="5" init-y="5" init-z="5"></cube>
-<cube init-x="10" init-y="10" init-z="10"></cube>
+<cube ng-repeat="cube in cubes"
+        init-x="{{cube.x}}"
+        init-y="{{cube.y}}"
+        init-z="{{cube.z}}">
+        </cube>
