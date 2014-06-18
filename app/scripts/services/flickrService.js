@@ -3,10 +3,11 @@
 angular.module('parimeoCubeApp')
     .factory('FlickrService', function ($http) {
         var getPhotosByTagFn = function (tag) {
-            return $http.get("http://api.flickr.com/services/rest/", {
+            // yahoo id: christophhanf@yahoo.de
+            return $http.get("https://api.flickr.com/services/rest/", {
                 params: {
-                    method: "flickr.potos.search",
-                    api_key: "API_KEY",
+                    method: "flickr.photos.search",
+                    api_key: "90efff7cd44768e968b1dabba4d2e15b",
                     format: "json",
                     nojsoncallback: 1,
                     per_page: "6",
